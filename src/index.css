@@ -1,0 +1,29 @@
+:root {
+  /* Cores de Fundo e Texto */
+  --bg-site: #FAF9F6;       /* Off-white */
+  --text-site: #1A1C1A;     /* Preto suave */
+  
+  /* Cores da Nav Bar (Sempre Verde no Modo Claro) */
+  --nav-main: #4FA68D;      /* Verde Pastel */
+  --nav-pill: #FAF9F6;      /* Cor das pílulas internas */
+  --img-logo: url("../src/assets/baroniVerde.png");
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-site: #000000;     /* Preto total */
+    --text-site: #FFFFFF;   /* Branco */
+    
+    /* Cores da Nav Bar (Sempre Azul no Modo Escuro) */
+    --nav-main: #3A86FF;    /* Azul */
+    --nav-pill: #1A1A1A;    /* Pílula cinza escuro para contraste no preto */
+    --img-logo: url("../src/assets/baroniAzuil.png");;
+    
+  }
+}
+
+body {
+  background-color: var(--bg-site);
+  color: var(--text-site);
+  margin: 0;
+}
