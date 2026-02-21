@@ -53,13 +53,13 @@
 
 .pill-logo {
   height: var(--nav-h);
-  width: 140px;               /* Largura fixa ou automática para caber o nome */
+  width: 140px;            
   background-image: var(--img-logo);
-  background-size: contain;   /* Garante que a logo apareça inteira */
+  background-size: contain;  
   background-repeat: no-repeat;
   background-position: center;
-  background-color: transparent; /* Ou var(--bg-site) */
-  border-radius: 9999px;      /* Formato de pílula */
+  background-color: transparent; 
+  border-radius: 9999px;   
   cursor: pointer;
   pointer-events: auto;
   display: inline-flex;

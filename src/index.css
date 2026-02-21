@@ -17,7 +17,7 @@
     /* Cores da Nav Bar (Sempre Azul no Modo Escuro) */
     --nav-main: #3A86FF;    /* Azul */
     --nav-pill: #1A1A1A;    /* Pílula cinza escuro para contraste no preto */
-    --img-logo: url("../src/assets/baroniAzuil.png");;
+    --img-logo: url("../src/assets/baroniAzuil.png");
     
   }
 }
