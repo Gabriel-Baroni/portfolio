@@ -2,7 +2,7 @@ import React, { useLayoutEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { TextPlugin } from 'gsap/TextPlugin';
 import './hero.css';
-import myProfilePic from '../assets/baroniVerde.png';
+import myProfilePic from '../../assets/eu.jpg';
 
 gsap.registerPlugin(TextPlugin);
 

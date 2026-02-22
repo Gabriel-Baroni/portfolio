@@ -1,0 +1,132 @@
+.about-section {
+  width: 100%;
+  max-width: 100vw; /* Impede que a seção passe da largura da tela */
+  min-height: 100vh;
+  padding: 100px 10%;
+  background-color: var(--bg-site);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden; /* Garante que nada que escape crie scroll */
+  box-sizing: border-box; /* Garante que o padding não aumente a largura total */
+}
+.section-header {
+  width: 100%;
+  margin-bottom: 60px;
+  text-align: left;
+}
+
+.section-title {
+  font-size: 3rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--text-site);
+  margin: 0;
+  letter-spacing: -1px;
+}
+
+.title-underline {
+  width: 60px;
+  height: 6px;
+  background-color: var(--nav-main);
+  margin-top: 10px;
+}
+
+/* Container de Conteúdo */
+.about-container {
+  max-width: 1200px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr; /* Visual menor, texto maior */
+  gap: 80px;
+  align-items: center;
+}
+
+/* Estilos do Pixel Transition */
+.about-visual {
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 20px 20px 60px rgba(0,0,0,0.05);
+}
+
+.about-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-card-active {
+  width: 100%;
+  height: 100%;
+  background-color: var(--nav-main);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--bg-site);
+  text-align: center;
+}
+
+.about-card-active p {
+  font-size: 1.4rem;
+  font-weight: 600;
+  font-style: italic;
+  margin-bottom: 15px;
+}
+
+/* Estilos do Texto */
+.about-greeting {
+  font-size: 2rem;
+  color: var(--text-site);
+  margin-bottom: 25px;
+  line-height: 1.2;
+}
+
+.about-bio p {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: var(--text-site);
+  opacity: 0.85;
+  margin-bottom: 20px;
+}
+
+.about-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.skill-badge {
+  padding: 8px 18px;
+  background: transparent;
+  border: 2px solid var(--nav-main);
+  color: var(--nav-main);
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+/* Responsividade */
+@media (max-width: 968px) {
+  .about-container {
+    grid-template-columns: 1fr;
+    gap: 0px;
+  }
+  
+  .section-title { font-size: 2.5rem; }
+  
+  .about-visual {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .about-bio p {
+  font-size: 1 rem;
+  line-height: 1;
+  color: var(--text-site);
+  opacity: 0.85;
+  margin-bottom: 20px;
+}
+}

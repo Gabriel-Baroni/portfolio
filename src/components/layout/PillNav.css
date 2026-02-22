@@ -1,6 +1,6 @@
 .pill-nav-container {
   position: fixed;
-  top: 1em;
+  top: 0rem;
   left: 0;
   right: 0;
   width: 100%;
@@ -8,6 +8,7 @@
   display: flex;
   justify-content: center;
   pointer-events: none; /* Mantido para clicar no fundo do site */
+  background-color: var(--bg-site);
 }
 
 @media (max-width: 768px) {
