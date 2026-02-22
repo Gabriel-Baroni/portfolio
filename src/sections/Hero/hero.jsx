@@ -2,14 +2,15 @@ import React, { useLayoutEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { TextPlugin } from 'gsap/TextPlugin';
 import './hero.css';
-import myProfilePic from '../../assets/eu.jpg';
+import myProfilePic from '/assets/hero/eu.jpg';
 
 gsap.registerPlugin(TextPlugin);
 
 const typingPhrases = [
   "Software_Developer.py",
-  "IT_Tech.dart",
-  "Research.js",
+  "Researcher.sql",
+  "Guy_Who_Love_To_Code.dart",
+  "knowledge is never too much.js",
   "Always_learning.json"
 ];
 
@@ -18,7 +19,6 @@ const Hero = () => {
   const [index, setIndex] = useState(0);
 
   useLayoutEffect(() => {
-    // O ctx garante que o GSAP limpe as animações se o componente desmontar
     let ctx = gsap.context(() => {
       const phrase = typingPhrases[index];
       
@@ -55,6 +55,7 @@ const Hero = () => {
         </div>
 
         <h1 className="hero-title">Gabriel Baroni</h1>
+        
         <div className="typing-box">
           <span className="hero-typing-text" ref={typingTextRef}></span>
           <span className="typing-cursor">|</span>

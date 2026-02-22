@@ -10,7 +10,7 @@
   box-sizing: border-box;
 }
 
-/* --- HEADER PADRONIZADO --- */
+/* --- HEADER --- */
 .section-header {
   width: 100%;
   max-width: 1200px;
@@ -35,31 +35,33 @@
   border-radius: 50px;
 }
 
-/* --- WRAPPER DO COMPONENTE --- */
+/* --- WRAPPER --- */
 .projects-swap-wrapper {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 550px; 
+  min-height: 600px; 
   margin-top: 20px;
   position: relative;
 }
 
-/* Container que o GSAP usa como referência */
 .card-swap-container {
   position: relative;
-  margin: 0 auto;
-  perspective: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1200px;
   transform-style: preserve-3d;
 }
 
 /* --- ESTILO DO CARD --- */
 .card {
+  position: absolute;
   background-color: var(--nav-pill, #1a1a1a);
   border: 1px solid rgba(var(--nav-main-rgb, 79, 166, 141), 0.3);
   border-radius: 24px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.6);
   overflow: hidden;
   color: var(--text-site);
   display: flex;
@@ -85,26 +87,51 @@
 .card-content h3 {
   font-size: 1.4rem;
   font-weight: 800;
-  margin: 0 0 10px 0;
+  margin-bottom: 10px;
+}
+
+.card-content p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  opacity: 0.8;
+  margin-bottom: 20px;
 }
 
 .proj-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin-top: auto;
+  margin-bottom: 15px;
 }
 
 .tag {
   font-size: 0.7rem;
   font-weight: 600;
-  background: rgba(var(--nav-main-rgb, 79, 166, 141), 0.1);
+  background: rgba(var(--nav-main-rgb), 0.1);
   color: var(--nav-main);
   padding: 4px 10px;
   border-radius: 50px;
 }
 
-/* --- RESPONSIVIDADE (AJUSTADA PARA DESLOCAMENTO) --- */
+.card-links {
+  display: flex;
+  gap: 15px;
+  margin-top: auto;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.link-icon {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--nav-main);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* --- RESPONSIVIDADE (AJUSTE PARA DESCER OS CARDS NO CELL) --- */
 @media (max-width: 768px) {
   .projects-section {
     padding: 60px 20px;
@@ -115,22 +142,19 @@
   }
 
   .projects-swap-wrapper {
-    /* Reduzimos a altura mínima para ajudar a subir o componente visualmente */
-    min-height: 620px; 
+    min-height: 550px;
+    margin-top: 0;
   }
 
   .card-swap-container {
-    /* MOVE O COMPONENTE PARA ESQUERDA E PARA CIMA NO CELULAR */
-    /* Ajuste os valores abaixo para controlar a intensidade do movimento */
-    transform: translate(-30px, -60px); 
+    transform: translate(-10px, 40px); 
   }
 
   .card {
-    /* Garante que o card não estoure a largura da tela do celular */
-    max-width: 80vw;
+    width: 85vw !important; 
   }
 
   .proj-img {
-    height: 150px;
+    height: 140px;
   }
 }

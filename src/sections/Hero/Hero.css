@@ -5,12 +5,16 @@
   align-items: center;
   justify-content: center;
   background-color: var(--bg-site);
-  padding-top: 80px;         /* Espaço para a Navbar fixa */
+  padding-top: 80px; 
   overflow: hidden;
+  position: relative;
 }
 
 .hero-content {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   z-index: 2;
 }
 
@@ -52,19 +56,13 @@
   animation: pulse-ring 3s cubic-bezier(0.45, 0, 0.55, 1) infinite;
 }
 
-.ring-1 { width: 180px; height: 180px; animation-delay: 0s; }
-.ring-2 { width: 220px; height: 220px; animation-delay: 1s; }
-.ring-3 { width: 260px; height: 260px; animation-delay: 2s; }
+.ring-1 { width: 200px; height: 200px; animation-delay: 0s; }
+.ring-2 { width: 240px; height: 240px; animation-delay: 1s; }
+.ring-3 { width: 280px; height: 280px; animation-delay: 2s; }
 
 @keyframes pulse-ring {
-  0% {
-    transform: scale(0.8);
-    opacity: 0.8;
-  }
-  100% {
-    transform: scale(1.5);
-    opacity: 0;
-  }
+  0% { transform: scale(0.8); opacity: 0.8; }
+  100% { transform: scale(1.5); opacity: 0; }
 }
 
 /* Tipografia */
@@ -94,9 +92,7 @@
   animation: blink 0.8s infinite;
 }
 
-@keyframes blink {
-  50% { opacity: 0; }
-}
+@keyframes blink { 50% { opacity: 0; } }
 
 /* Botões */
 .hero-buttons {
@@ -107,13 +103,13 @@
 
 .btn-primary {
   background-color: var(--nav-main);
-  color: var(--bg-site);
+  color: #fff;
   padding: 14px 32px;
   border-radius: 9999px;
   text-decoration: none;
   font-weight: 600;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(var(--nav-main-rgb), 0.4);
+  box-shadow: 0 4px 15px rgba(var(--nav-main-rgb), 0.3);
 }
 
 .btn-secondary {
@@ -129,28 +125,17 @@
 .btn-primary:hover {
   transform: translateY(-3px);
   filter: brightness(1.1);
-  box-shadow: 0 6px 20px rgba(var(--nav-main-rgb), 0.5);
 }
 
 .btn-secondary:hover {
   background-color: var(--nav-main);
-  color: var(--bg-site);
+  color: #fff;
 }
 
 /* Responsividade Mobile */
 @media (max-width: 480px) {
-  .hero-buttons {
-    flex-direction: column;
-    padding: 0 20px;
-  }
-  
-  .profile-area {
-    width: 200px;
-    height: 200px;
-  }
-  
-  .profile-pic-container {
-    width: 130px;
-    height: 130px;
-  }
+  .hero-buttons { flex-direction: column; padding: 0 20px; }
+  .profile-area { width: 180px; height: 180px; }
+  .profile-pic-container { width: 150px; height: 150px; }
+  .hero-title { font-size: 2.2rem; }
 }

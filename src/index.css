@@ -6,7 +6,7 @@
   /* Cores da Nav Bar (Sempre Verde no Modo Claro) */
   --nav-main: #4FA68D;      /* Verde Pastel */
   --nav-pill: #FAF9F6;      /* Cor das pílulas internas */
-  --img-logo: url("../src/assets/baroniVerde.png");
+  --img-logo: url("/assets/baroniVerde.png");
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,7 +17,7 @@
     /* Cores da Nav Bar (Sempre Azul no Modo Escuro) */
     --nav-main: #3A86FF;    /* Azul */
     --nav-pill: #1A1A1A;    /* Pílula cinza escuro para contraste no preto */
-    --img-logo: url("../src/assets/baroniAzuil.png");
+    --img-logo: url("/assets/baroniAzuil.png");
     
   }
 }

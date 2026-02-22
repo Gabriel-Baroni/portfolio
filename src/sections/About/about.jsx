@@ -18,7 +18,7 @@ const About = () => {
           <PixelTransition
             firstContent={
               <img 
-                src="src/assets/eu1.jpeg" 
+                src="/assets/eu1.jpeg" 
                 alt="Gabriel Baroni" 
                 className="about-image"
               />

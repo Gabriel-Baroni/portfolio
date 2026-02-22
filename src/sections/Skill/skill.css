@@ -1,0 +1,120 @@
+/* --- CONTAINER DA SEÇÃO --- */
+.skills-section {
+  width: 100%;
+  padding: 100px 10%;
+  background-color: var(--bg-site);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* --- GRID DE ÍCONES --- */
+.skills-grid-container {
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+/* --- AJUSTES NO GLASS ICONS --- */
+.icon-btns {
+  display: grid;
+  /* Grid responsivo para as habilidades da UNIFESP e IFSP */
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 40px;
+  width: 100%;
+  justify-items: center;
+}
+
+.icon-btn {
+  position: relative;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.icon-btn:hover {
+  transform: translateY(-8px);
+}
+
+.icon-btn__front {
+  width: 70px;
+  height: 70px;
+  /* Fundo translúcido que se adapta ao tema claro/escuro */
+  background: rgba(var(--text-site-rgb, 255, 255, 255), 0.08); 
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Borda sutil para definir o card de vidro */
+  border: 1px solid rgba(var(--text-site-rgb, 0, 0, 0), 0.15);
+  z-index: 2;
+}
+
+.icon-btn__icon {
+  font-size: 32px;
+  /* Cor do ícone dinâmica para não sumir no modo claro */
+  color: var(--text-site); 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-btn__back {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: 70px;
+  height: 70px;
+  border-radius: 18px;
+  filter: blur(20px);
+  /* Opacidade aumentada para o brilho neon aparecer em fundos claros */
+  opacity: 0.6; 
+  z-index: 1;
+}
+
+.icon-btn__label {
+  margin-top: 12px;
+  font-size: 0.85rem;
+  font-weight: 700; /* Negrito para melhor legibilidade */
+  color: var(--text-site);
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+
+/* --- RESPONSIVIDADE (MOBILE) --- */
+@media (max-width: 768px) {
+  .skills-section {
+    padding: 60px 20px;
+  }
+
+  .icon-btns {
+    /* 3 ícones por linha no celular para manter o alinhamento */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 25px;
+  }
+
+  .icon-btn__front, .icon-btn__back {
+    width: 60px;
+    height: 60px;
+  }
+
+  .icon-btn__icon {
+    font-size: 26px;
+  }
+
+  .icon-btn__label {
+    font-size: 0.75rem;
+  }
+}

@@ -4,8 +4,8 @@ import { FiUsers, FiCpu } from 'react-icons/fi';
 import './experience.css';
 
 // 1. IMPORTANTE: No Vite/React, você deve importar a imagem como um módulo
-import IFSP from '../../assets/IFSP.jpg';
-import papuguinho from '../../assets/papuguinho.png';
+import IFSP from '/assets/IFSP.jpg';
+import papuguinho from '/assets/papuguinho.png';
 
 
 const Experience = () => {

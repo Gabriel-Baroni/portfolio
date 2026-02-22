@@ -6,6 +6,8 @@ import About from './sections/About/about.jsx';
 import Education from './sections/Education/education.jsx';
 import Experience from './sections/Experience/experience.jsx';
 import Projects from './sections/Projects/project.jsx';
+import Skills from './sections/Skill/skill.jsx';
+import Contact from './sections/Contact/contact.jsx';
 
 
 const navItems = [
@@ -36,6 +38,8 @@ function App() {
         <Education />
         <Experience />
         <Projects />
+        <Skills />
+        <Contact />
 
       </main>
     </div>
