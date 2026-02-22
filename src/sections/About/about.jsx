@@ -1,6 +1,6 @@
 import React from 'react';
 import PixelTransition from '../../components/bits/pixelTransition/pixel'
-import './About.css';
+import './about.css';
 
 const About = () => {
   return (

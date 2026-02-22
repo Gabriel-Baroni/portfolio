@@ -1,7 +1,7 @@
 import React, { useLayoutEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { TextPlugin } from 'gsap/TextPlugin';
-import './hero.css';
+import './Hero.css';
 import myProfilePic from '/assets/hero/eu.jpg';
 
 gsap.registerPlugin(TextPlugin);
