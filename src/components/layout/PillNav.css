@@ -59,10 +59,11 @@
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent; 
-  border-radius: 9999px;   
+  border-radius: 50%;   
   cursor: pointer;
   pointer-events: auto;
   display: inline-flex;
+  
 }
 
 .pill-logo img {
@@ -182,7 +183,8 @@
   width: var(--nav-h);
   height: var(--nav-h);
   border-radius: 50%;
-  background: var(--base, #000);
+  /* Mude para var(--nav-main) para o botão ter a cor da sua logo */
+  background: var(--nav-main, #4FA68D); 
   border: none;
   display: none;
   flex-direction: column;
@@ -192,6 +194,7 @@
   cursor: pointer;
   padding: 0;
   position: relative;
+  z-index: 1001; /* Garante que fique acima de outros elementos */
 }
 
 @media (max-width: 768px) {
@@ -203,12 +206,12 @@
 .hamburger-line {
   width: 16px;
   height: 2px;
-  background: var(--pill-bg, #fff);
+  /* Cor das linhas: use o fundo do site para dar contraste com o botão colorido */
+  background: var(--bg-site, #fff); 
   border-radius: 1px;
-  transition: all 0.01s ease;
+  transition: all 0.3s ease; /* Aumentei um pouco o tempo para suavizar */
   transform-origin: center;
 }
-
 .mobile-menu-popover {
   position: absolute;
   top: 3em;
