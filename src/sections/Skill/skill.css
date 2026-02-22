@@ -10,26 +10,71 @@
   box-sizing: border-box;
 }
 
-/* --- GRID DE ÍCONES --- */
-.skills-grid-container {
+/* --- HEADER DA SEÇÃO --- */
+.section-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: var(--text-site);
+  margin-bottom: 10px;
+}
+
+.title-underline {
+  width: 60px;
+  height: 4px;
+  background-color: var(--nav-main);
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+/* --- ESTRUTURA DE CATEGORIAS --- */
+.skills-container {
   width: 100%;
   max-width: 1000px;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  gap: 60px; /* Espaço entre Backend, Frontend e Tools */
   margin-top: 40px;
 }
 
-/* --- AJUSTES NO GLASS ICONS --- */
-.icon-btns {
-  display: grid;
-  /* Grid responsivo para as habilidades da UNIFESP e IFSP */
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  gap: 40px;
+.skill-category {
   width: 100%;
-  justify-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
+/* --- ESTILO DOS SUBTÍTULOS (ESTILO ACADÊMICO/TECH) --- */
+.category-subtitle {
+  font-size: 1.1rem;
+  color: var(--nav-main);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 25px;
+  font-weight: 800;
+  border-left: 4px solid var(--nav-main);
+  padding-left: 15px;
+  line-height: 1;
+}
+
+/* --- GRID DE ÍCONES --- */
+.skills-grid-container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.icon-btns {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+  gap: 30px;
+  width: 100%;
+}
+
+/* --- COMPONENTE GLASS ICON (INDIVIDUAL) --- */
 .icon-btn {
   position: relative;
   border: none;
@@ -39,7 +84,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: transform 0.3s ease;
+  /* Transição suave para o movimento de subida */
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .icon-btn:hover {
@@ -49,60 +95,88 @@
 .icon-btn__front {
   width: 70px;
   height: 70px;
-  /* Fundo translúcido que se adapta ao tema claro/escuro */
-  background: rgba(var(--text-site-rgb, 255, 255, 255), 0.08); 
+  background: rgba(255, 255, 255, 0.05); 
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-radius: 18px;
   display: flex;
   align-items: center;
   justify-content: center;
-  /* Borda sutil para definir o card de vidro */
-  border: 1px solid rgba(var(--text-site-rgb, 0, 0, 0), 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   z-index: 2;
 }
 
 .icon-btn__icon {
-  font-size: 32px;
-  /* Cor do ícone dinâmica para não sumir no modo claro */
-  color: var(--text-site); 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  font-size: 30px;
+  color: var(--text-site);
 }
 
 .icon-btn__back {
   position: absolute;
-  top: 8px;
-  left: 8px;
+  top: 4px;
+  left: 4px;
   width: 70px;
   height: 70px;
   border-radius: 18px;
-  filter: blur(20px);
-  /* Opacidade aumentada para o brilho neon aparecer em fundos claros */
-  opacity: 0.6; 
+  filter: blur(15px);
+  opacity: 0.4;
   z-index: 1;
+  transition: opacity 0.3s ease;
 }
 
+.icon-btn:hover .icon-btn__back {
+  opacity: 0.7;
+}
+
+/* --- LABEL (OCULTO POR PADRÃO) --- */
 .icon-btn__label {
-  margin-top: 12px;
-  font-size: 0.85rem;
-  font-weight: 700; /* Negrito para melhor legibilidade */
+  margin-top: 10px;
+  font-size: 0.8rem;
+  font-weight: 600;
   color: var(--text-site);
   letter-spacing: 0.5px;
   text-align: center;
+  
+  /* Estado Inicial: Invisível e levemente abaixo */
+  opacity: 0;
+  transform: translateY(5px);
+  transition: all 0.3s ease;
+  pointer-events: none;
 }
 
-/* --- RESPONSIVIDADE (MOBILE) --- */
+/* --- ESTADO AO PASSAR O MOUSE SOBRE O BOTÃO --- */
+.icon-btn:hover .icon-btn__label {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --- RESPONSIVIDADE --- */
 @media (max-width: 768px) {
   .skills-section {
     padding: 60px 20px;
   }
 
+  .skills-container {
+    gap: 45px;
+  }
+
+  .skill-category {
+    align-items: center; /* Centraliza no mobile */
+  }
+
+  .category-subtitle {
+    font-size: 0.95rem;
+    border-left: none;
+    border-bottom: 2px solid var(--nav-main);
+    padding: 0 0 5px 0;
+    margin-bottom: 20px;
+    align-self: center;
+  }
+
   .icon-btns {
-    /* 3 ícones por linha no celular para manter o alinhamento */
-    grid-template-columns: repeat(3, 1fr); 
-    gap: 25px;
+    grid-template-columns: repeat(3, 1fr); /* 3 ícones por linha no celular */
+    gap: 20px;
+    justify-items: center;
   }
 
   .icon-btn__front, .icon-btn__back {
@@ -110,11 +184,9 @@
     height: 60px;
   }
 
-  .icon-btn__icon {
-    font-size: 26px;
-  }
-
   .icon-btn__label {
+    opacity: 0;
+    transform: translateY(0);
     font-size: 0.75rem;
   }
 }

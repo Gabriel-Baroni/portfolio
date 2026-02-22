@@ -1,5 +1,6 @@
 import React from 'react';
-import { FiMail, FiLinkedin, FiGithub } from 'react-icons/fi';
+import { FiMail, FiLinkedin, FiGithub, FiFileText } from 'react-icons/fi'; // Adicionei FiFileText
+import { FaGraduationCap } from 'react-icons/fa'; // Opcional: ícone acadêmico
 import './contact.css';
 
 const Contact = () => {
@@ -7,35 +8,42 @@ const Contact = () => {
     {
       icon: <FiMail />,
       label: 'Email',
-      value: 'gabriel.baroni@exemplo.com', // Substitua pelo seu email real
-      url: 'mailto:gabriel.baroni@exemplo.com',
-      color: '#EA4335' // Cor do Google/Gmail
+      value: 'gdepaulabaroni@gmail.com', 
+      url: 'mailto:gdepaulabaroni@gmail.com',
+      color: '#EA4335'
     },
     {
       icon: <FiLinkedin />,
       label: 'LinkedIn',
-      value: 'linkedin.com/in/gabrielbaroni',
-      url: 'https://linkedin.com/in/seu-perfil',
-      color: '#0A66C2' // Cor do LinkedIn
+      value: 'linkedin.com/in/gabrieldpbaroni/',
+      url: 'https://www.linkedin.com/in/gabrieldpbaroni/',
+      color: '#0A66C2'
     },
     {
       icon: <FiGithub />,
       label: 'GitHub',
-      value: 'github.com/gabrielbaroni',
-      url: 'https://github.com/seu-usuario',
-      color: 'var(--text-site)' // Cor dinâmica do seu tema
+      value: 'github.com/Gabriel-Baroni',
+      url: 'https://github.com/Gabriel-Baroni',
+      color: 'var(--text-site)'
+    },
+    {
+      icon: <FaGraduationCap />, // Ícone que remete ao meio acadêmico/CNPq
+      label: 'Lattes Curriculum',
+      value: 'Access my academic trajectory',
+      url: 'https://lattes.cnpq.br/0153768116859752', // Substitua pelo seu link real
+      color: '#003366' // Azul marinho clássico de instituições
     }
   ];
 
   return (
     <section id="contact" className="contact-section">
       <div className="section-header">
-        <h2 className="section-title">Contato</h2>
+        <h2 className="section-title">Contact</h2>
         <div className="title-underline"></div>
       </div>
 
       <p className="contact-subtitle">
-        Vamos conversar sobre tecnologia, acessibilidade ou novas oportunidades!
+        Let's talk about technology, accessibility, science, or new opportunities!
       </p>
 
       <div className="contact-container">

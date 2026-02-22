@@ -1,6 +1,6 @@
 import React from 'react'
 import './App.css'
-import PillNav from './components/layout/Pillnav.jsx';
+import PillNav from './components/layout/PillNav.jsx';
 import Hero from './sections/Hero/hero.jsx';
 import About from './sections/About/about.jsx';
 import Education from './sections/Education/education.jsx';
