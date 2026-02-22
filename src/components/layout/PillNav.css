@@ -8,7 +8,8 @@
   z-index: 10000;
   display: flex;
   justify-content: center;
-  pointer-events: none; /* Permite clicar no conteúdo do site através do container */
+  pointer-events: none; 
+  background-color: var(--bg-site);
 }
 
 .pill-nav {
