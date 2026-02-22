@@ -5,6 +5,7 @@ import Hero from './sections/Hero/hero.jsx';
 import About from './sections/About/about.jsx';
 import Education from './sections/Education/education.jsx';
 import Experience from './sections/Experience/experience.jsx';
+import Projects from './sections/Projects/project.jsx';
 
 
 const navItems = [
@@ -34,6 +35,7 @@ function App() {
         <About />
         <Education />
         <Experience />
+        <Projects />
 
       </main>
     </div>

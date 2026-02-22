@@ -1,126 +1,88 @@
 .carousel-container {
   position: relative;
-  overflow: hidden;
-  border: 1px solid rgba(var(--nav-main-rgb, 79, 166, 141), 0.2);
-  border-radius: 32px; /* Aumentado para acompanhar o tamanho maior */
-  padding: 24px;       /* Mais respiro interno */
-  --outer-r: 32px;
-  --p-distance: 16px;
-  background-color: transparent;
+  overflow: visible; 
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .carousel-track {
   display: flex;
+  align-items: center;
+  transform-style: preserve-3d;
 }
 
 .carousel-item {
-  position: relative;
-  display: flex;
   flex-shrink: 0;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
-  border: 1px solid rgba(var(--nav-main-rgb, 79, 166, 141), 0.3);
-  border-radius: calc(var(--outer-r) - var(--p-distance));
   background-color: var(--nav-pill, #111);
-  overflow: hidden;
-  cursor: grab;
-  transition: border-color 0.3s ease, transform 0.3s ease;
-}
-
-.carousel-item:active {
-  cursor: grabbing;
-}
-
-.carousel-item:hover {
-  border-color: var(--nav-main);
-}
-
-.carousel-container.round {
-  border: 1px solid var(--nav-main);
-}
-
-.carousel-item.round {
-  background-color: var(--nav-pill);
-  position: relative;
-  bottom: 0.1em;
-  border: 1px solid var(--nav-main);
-  justify-content: center;
-  align-items: center;
+  border: 1px solid rgba(var(--nav-main-rgb, 79, 166, 141), 0.3);
+  border-radius: 24px;
+  padding: 30px;
+  backface-visibility: hidden;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centraliza conteúdo no mobile */
   text-align: center;
 }
 
-.carousel-indicator.active {
-  background-color: var(--nav-main);
-  box-shadow: 0 0 10px var(--nav-main);
-  transform: scale(1.2); /* Destaque maior na bolinha ativa */
-}
-
-.carousel-indicator.inactive {
-  background-color: var(--text-site);
-  opacity: 0.2;
-}
-
-.carousel-item-header {
-  margin-bottom: 20px;
-  padding: 28px; /* Mais espaço no topo */
-  padding-top: 28px;
-}
-
-.carousel-icon-container {
+.carousel-image-container {
+  width: 100px;
+  height: 100px;
+  background: white;
+  border-radius: 12px;
   display: flex;
-  height: 48px; /* Ícone visivelmente maior */
-  width: 48px;  /* Ícone visivelmente maior */
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
-  background-color: var(--nav-main);
+  margin-bottom: 20px;
+  overflow: hidden;
+  padding: 5px;
 }
 
-.carousel-icon {
-  height: 24px; /* Proporção do ícone aumentada */
-  width: 24px;  /* Proporção do ícone aumentada */
-  color: var(--bg-site);
-}
-
-.carousel-item-content {
-  padding: 28px; /* Conteúdo mais afastado das bordas */
-  padding-bottom: 32px;
+.carousel-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .carousel-item-title {
-  margin-bottom: 8px;
+  font-size: 1.5rem;
   font-weight: 900;
-  font-size: 24px; /* Título maior para destaque */
   color: var(--text-site);
-  letter-spacing: -0.5px;
+  margin-bottom: 10px;
 }
 
 .carousel-item-description {
-  font-size: 16px; /* Fonte da descrição aumentada para 16px */
-  line-height: 1.6; /* Melhor legibilidade */
+  font-size: 1rem;
+  line-height: 1.5;
   color: var(--text-site);
   opacity: 0.8;
 }
 
-.carousel-indicators-container {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-}
-
-.carousel-indicators {
-  margin-top: 24px;
-  display: flex;
-  width: 180px; /* Alargado para equilibrar com o container maior */
-  justify-content: space-between;
-  padding: 0 32px;
-}
-
+/* Bolinhas com alto contraste para modo escuro */
 .carousel-indicator {
-  height: 10px; /* Bolinhas ligeiramente maiores */
-  width: 10px;  /* Bolinhas ligeiramente maiores */
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
+  border: 2px solid var(--text-site);
+  background-color: transparent;
+  opacity: 0.3;
+  margin: 10px 8px;
   cursor: pointer;
-  transition: all 200ms ease;
+  display: inline-flex
+}
+
+.carousel-indicator.active {
+  background-color: var(--nav-main);
+  border-color: var(--nav-main);
+  opacity: 1;
+  box-shadow: 0 0 12px var(--nav-main);
+}
+
+@media (max-width: 768px) {
+  .carousel-item { padding: 20px; }
+  .carousel-item-title { font-size: 1.2rem; }
+  .carousel-item-description { font-size: 0.9rem; }
 }
