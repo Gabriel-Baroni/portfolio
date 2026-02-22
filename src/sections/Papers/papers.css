@@ -157,4 +157,10 @@
   .proj-img {
     height: 140px;
   }
+
+  .card-content h3 {
+  font-size: 0.7rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
 }
