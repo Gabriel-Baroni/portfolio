@@ -23,7 +23,6 @@ const PillNav = ({
   const tlRefs = useRef([]);
   const activeTweenRefs = useRef([]);
   const logoImgRef = useRef(null);
-  const logoTweenRef = useRef(null);
   const hamburgerRef = useRef(null);
   const mobileMenuRef = useRef(null);
   const navItemsRef = useRef(null);
@@ -113,7 +112,7 @@ const PillNav = ({
     <div className="pill-nav-container">
       <nav className={`pill-nav ${className}`} style={{ '--pill-bg': pillColor, '--base': baseColor }}>
         <a href="#me" className="pill-logo" ref={logoRef} onMouseEnter={() => gsap.to(logoImgRef.current, { rotate: 360, duration: 0.4 })}>
-          <img src={logo} alt={logoAlt} ref={logoImgRef} />
+      
         </a>
 
         <div className="pill-nav-items desktop-only" ref={navItemsRef}>
