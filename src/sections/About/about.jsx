@@ -43,7 +43,7 @@ const About = () => {
           <div className="about-bio">
                         <p>
 
-            <strong>I am Gabriel Baroni</strong>, born and live in Brazil, a IT Technician from 
+            <strong>I am Gabriel de Paula Baroni</strong>, born and live in Brazil, a IT Technician from 
             <strong> Federal Institute of São Paulo - IFSP</strong> and a Science and Technology student at
             <strong> Federal University of São Paulo - UNIFESP</strong>. Driven by curiosity and determination to
             solve complex problems, I currently work as a software developer on the

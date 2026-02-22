@@ -16,7 +16,7 @@ const Footer = () => {
 
       <div className="footer-bottom">
         <p>&copy; {currentYear} Gabriel Baroni. All rights reserved.</p>
-        <p className="footer-tag">Made white ❤️ and code</p>
+        <p className="footer-tag">Made with ❤️ and code</p>
       </div>
     </footer>
   );

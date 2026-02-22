@@ -15,8 +15,8 @@ const meusProjetos = [
 
   {
     title: 'Bem-Aprendi Web Game',
-    desc: 'Browser game aimed at reducing the educational gap in elementary school children by creating a playful universe based on Brazilian fauna.',
-    tags: ['JavaScript', 'CreateJS', 'NodeJS', 'Express.js', 'Supabase'],
+    desc: 'An educational browser game with a playful universe based on Brazilian fauna..',
+    tags: ['JavaScript', 'NodeJS', 'Supabase'],
     image: '/assets/projects/aprendi.png',
     github: 'https://github.com/Gabriel-Baroni/Bem-Aprendi',
     demo: '#' // Se não tiver demo, o botão não aparece
