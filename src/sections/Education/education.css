@@ -1,118 +1,114 @@
 .education-section {
   width: 100%;
-  padding: 100px 10%;
+  max-width: 100vw; /* Garante que a seção não passe da largura do viewport */
+  padding: 80px 5%;
   background-color: var(--bg-site);
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow-x: hidden;
+  overflow-x: hidden; /* Trava qualquer tentativa de scroll lateral */
+  box-sizing: border-box;
 }
 
 .timeline-container {
-  max-width: 900px;
+  max-width: 800px;
   width: 100%;
   position: relative;
   margin-top: 40px;
-  padding-left: 30px; /* Espaço para a linha */
+  /* Espaço para a linha ser desenhada dentro do padding, sem margem negativa */
+  padding-left: 40px; 
+  box-sizing: border-box;
 }
 
-/* A Linha Vertical */
+/* A Linha Vertical - Agora dentro do container */
 .timeline-container::before {
   content: '';
   position: absolute;
-  left: 0;
+  left: 15px; /* Alinhada dentro do padding-left */
   top: 0;
-  width: 3px;
+  width: 2px;
   height: 100%;
-  background: rgba(var(--nav-main-rgb, 79, 166, 141), 0.2);
-  border-radius: 50px;
+  background: var(--nav-main);
+  opacity: 0.3;
 }
 
 .timeline-item {
   position: relative;
-  margin-bottom: 60px;
+  margin-bottom: 50px;
+  width: 100%;
 }
 
-.timeline-item:last-child {
-  margin-bottom: 0;
-}
-
-/* O Ponto na Linha */
+/* O Ponto na Linha - Posicionado em relação ao container pai */
 .timeline-dot {
   position: absolute;
-  left: -35px; /* Alinha exatamente com a linha vertical */
-  top: 5px;
-  width: 14px;
-  height: 14px;
+  left: -32px; /* Ajustado para bater exatamente em cima da ::before */
+  top: 8px;
+  width: 12px;
+  height: 12px;
   background: var(--nav-main);
-  border: 4px solid var(--bg-site);
+  border: 3px solid var(--bg-site);
   border-radius: 50%;
   z-index: 2;
-  transition: transform 0.3s ease;
-}
-
-.timeline-item.active .timeline-dot {
-  box-shadow: 0 0 15px var(--nav-main);
-  transform: scale(1.2);
 }
 
 .timeline-date {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 800;
   color: var(--nav-main);
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   text-transform: uppercase;
-  letter-spacing: 1px;
 }
 
 .timeline-content {
-  background: rgba(var(--nav-main-rgb, 79, 166, 141), 0.03);
-  padding: 25px;
-  border-radius: 15px;
-  border-left: 4px solid transparent;
-  transition: all 0.3s ease;
-}
-
-.timeline-item.active .timeline-content {
-  border-left: 4px solid var(--nav-main);
-  background: rgba(var(--nav-main-rgb, 79, 166, 141), 0.08);
+  background: rgba(var(--nav-main-rgb), 0.05); /* Se não tiver a var RGB, use uma cor sólida leve */
+  padding: 20px;
+  border-radius: 12px;
+  width: 100%;
+  box-sizing: border-box; /* Fundamental para o padding não empurrar a div pra fora */
 }
 
 .timeline-content h3 {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
+  margin: 0 0 5px 0;
   color: var(--text-site);
-  margin-bottom: 5px;
 }
 
 .timeline-content h4 {
-  font-size: 1rem;
+  font-size: 0.95rem;
   color: var(--nav-main);
-  margin-bottom: 15px;
-  font-weight: 600;
+  margin: 0 0 10px 0;
 }
 
 .timeline-content p {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: var(--text-site);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0;
   opacity: 0.8;
 }
 
-/* Responsividade Mobile */
+/* Responsividade Mobile Estrita */
 @media (max-width: 768px) {
   .education-section {
-    padding: 60px 5%;
+    padding: 60px 20px; /* Padding menor e fixo em pixels para controle total */
   }
 
   .timeline-container {
-    padding-left: 20px;
+    padding-left: 30px; /* Reduz o recuo da linha no mobile */
+  }
+
+  .timeline-container::before {
+    left: 10px; /* Move a linha mais para a borda esquerda */
   }
 
   .timeline-dot {
-    left: -25px;
+    left: -25px; /* Realinha o ponto com a nova posição da linha */
+  }
+
+  .timeline-content {
+    padding: 15px;
   }
 
   .timeline-content h3 {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 }

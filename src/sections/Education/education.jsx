@@ -17,7 +17,6 @@ const Education = () => {
       description: "Início do projeto Papuguinho como bolsista de pesquisa, focando em desenvolvimento mobile e acessibilidade.",
       current: false
     }
-    // Adicione outros aqui se houver
   ];
 
   return (
