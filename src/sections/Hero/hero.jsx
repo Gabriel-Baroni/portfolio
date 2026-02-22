@@ -10,7 +10,7 @@ const typingPhrases = [
   "Software_Developer.py",
   "Researcher.sql",
   "Guy_Who_Love_To_Code.dart",
-  "knowledge is never too much.js",
+  "knowledge_is_never_too_much.js",
   "Always_learning.json"
 ];
 

@@ -4,17 +4,17 @@ import './education.css';
 const Education = () => {
   const educationData = [
     {
-      institution: "UNIFESP",
-      course: "Bacharelado em Ciência e Tecnologia (BCT)",
+      institution: "Federal University of São Paulo - UNIFESP",
+      course: "Bachelor of Science and Technology",
       period: "2026 - Presente",
-      description: "Foco em formação interdisciplinar, explorando fundamentos de computação e tecnologias avançadas.",
+      description: "Focus on interdisciplinary training, exploring the fundamentals of computing, mathematics, and natural sciences.",
       current: true
     },
     {
-      institution: "IFSP Jacareí",
-      course: "Técnico em Informática (Pesquisa & Desenvolvimento)",
-      period: "2024 - 2025",
-      description: "Início do projeto Papuguinho como bolsista de pesquisa, focando em desenvolvimento mobile e acessibilidade.",
+      institution: "Federal Institute of São Paulo - IFSP",
+      course: "IT Technician integrated with High School.",
+      period: "2022 - 2025",
+      description: "A high school course of excellent quality, integrated with a technical course focused on the fundamentals and the job market in the technology field.",
       current: false
     }
   ];

@@ -6,8 +6,10 @@ import About from './sections/About/about.jsx';
 import Education from './sections/Education/education.jsx';
 import Experience from './sections/Experience/experience.jsx';
 import Projects from './sections/Projects/project.jsx';
+import Papers from './sections/Papers/papers.jsx';
 import Skills from './sections/Skill/skill.jsx';
 import Contact from './sections/Contact/contact.jsx';
+import Footer from './components/layout/footer.jsx';
 
 
 const navItems = [
@@ -16,6 +18,7 @@ const navItems = [
   { label: 'Education', href: '#education' },
   { label: 'Experience', href: '#experience' },
   { label: 'Projects', href: '#projects' },
+  { label: 'Scientific Papers', href: '#papers' },
   { label: 'Skills', href: '#skills' },
   { label: 'Contact', href: '#contact' },
 ];
@@ -38,8 +41,10 @@ function App() {
         <Education />
         <Experience />
         <Projects />
+        <Papers />
         <Skills />
         <Contact />
+        <Footer />
 
       </main>
     </div>

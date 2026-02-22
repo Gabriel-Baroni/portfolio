@@ -18,15 +18,15 @@ const About = () => {
           <PixelTransition
             firstContent={
               <img 
-                src="/assets/eu1.jpeg" 
+                src="/assets/about/eu.jpg" 
                 alt="Gabriel Baroni" 
                 className="about-image"
               />
             }
             secondContent={
               <div className="about-card-active">
-                <p>"Tecnologia só faz sentido se for para incluir."</p>
-                <span>Gabriel Baroni</span>
+                <p>"We are a way to the cosmos to know it self."</p>
+                <span>Carl Sagan</span>
               </div>
             }
             gridSize={12}
@@ -38,20 +38,35 @@ const About = () => {
 
         {/* Lado Direito: Texto Informativo */}
         <div className="about-text-content">
-          <h3 className="about-greeting">Desenvolvedor focado em impacto social.</h3>
+          <h3 className="about-greeting">Software Developer • IT technician • Researcher.</h3>
           
           <div className="about-bio">
-            <p>
-              Sou o <strong>Gabriel Baroni</strong>, estudante de Ciência e Tecnologia na 
-              <strong> UNIFESP</strong>. Minha atuação como co-fundador do 
-              <strong> Papuguinho</strong> me permitiu unir a paixão pelo desenvolvimento 
-              com o compromisso pela acessibilidade.
+                        <p>
+
+            <strong>I am Gabriel Baroni</strong>, born and live in Brazil, a IT Technician from 
+            <strong> Federal Institute of São Paulo - IFSP</strong> and a Science and Technology student at
+            <strong> Federal University of São Paulo - UNIFESP</strong>. Driven by curiosity and determination to
+            solve complex problems, I currently work as a software developer on the
+            project <strong>Papuguinho</strong>, an application focused on Augmentative and Alternative Communication (AAC) to promote inclusion.
             </p>
-            <p>
-              Especialista em ecossistemas como <strong>FlutterFlow</strong> e 
-              <strong> Firebase</strong>, trabalho para criar soluções de Comunicação 
-              Alternativa (AAC) que devolvem a autonomia para pessoas neurodivergentes.
-            </p>
+
+           <p>
+            Specialist in ecosystems such as <strong>FlutterFlow</strong> and    
+            <strong> Firebase</strong>, in addition to having experience with 
+            <strong> Full Stack</strong> and <strong>Back-end</strong> development with languages such as 
+            <strong> Python</strong> and <strong>JavaScript</strong>.
+          </p>
+
+          <p>
+              In addition to my technical work, I am a researcher with more than 
+              <strong> 9 scientific papers</strong> and works presented at 
+              <strong> national</strong> and <strong>international</strong> conferences.
+          </p>
+
+          <p>
+            <em>I believe that, with technology, it is possible to improve the experience of living on planet Earth. Helping people, the environment, and society.</em>
+          </p>
+
           </div>
 
 

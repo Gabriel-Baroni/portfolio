@@ -1,36 +1,63 @@
-.card-swap-container {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  transform: translate(5%, 20%);
-  transform-origin: bottom right;
-
-  perspective: 900px;
-  overflow: visible;
-}
-
 .card {
   position: absolute;
   top: 50%;
   left: 50%;
+  border-radius: 24px;
+  padding: 40px; /* Mais preenchimento para o conteúdo respirar */
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Empurra o botão para baixo */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  cursor: default; /* Cursor normal, já que o botão é o foco */
+}
+
+/* O BOTÃO DESTACADO DENTRO DO CARD */
+.card-internal-btn {
+  align-self: flex-start; /* Alinhado à esquerda, mas pode ser center */
+  padding: 6px 18px;
+  background-color: var(--nav-main);
+  color: #fff;
+  border: none;
   border-radius: 12px;
-  border: 1px solid #fff;
-  background: #000;
-
-  transform-style: preserve-3d;
-  will-change: transform;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(var(--nav-main-rgb), 0.3);
 }
 
-@media (max-width: 768px) {
-  .card-swap-container {
-    transform: scale(0.75) translate(25%, 25%);
+.card-internal-btn:hover {
+  transform: scale(1.05);
+  filter: brightness(1.2);
+}
+
+.card-internal-btn:active {
+  transform: scale(0.95);
+}
+
+/* --- SOMENTE MEDIA QUERIES PARA DISPOSITIVOS MÓVEIS --- */
+@media (max-width: 600px) {
+  .card {
+    /* Ajusta a largura para não vazar da tela do celular */
+    width: 90vw !important;
+    /* Reduz o padding para sobrar mais espaço interno no mobile */
+    padding: 20px;
+    /* Permite que o card ajuste sua altura ao conteúdo */
+    height: auto !important;
+    min-height: 280px;
+    box-shadow: 0 4px 10px rgba(var(--nav-main-rgb), 0.2) !important;
   }
-}
 
-@media (max-width: 480px) {
-  .card-swap-container {
-    transform: scale(0.55) translate(25%, 25%);
+  .card-internal-btn {
+    /* No mobile, o botão centralizado facilita o toque */
+    width: 100%;
+    align-self: center;
+    padding: 12px 18px;
+    text-align: center;
+
   }
 }
