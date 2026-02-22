@@ -111,7 +111,7 @@ const PillNav = ({
   return (
     <div className="pill-nav-container">
       <nav className={`pill-nav ${className}`} style={{ '--pill-bg': pillColor, '--base': baseColor }}>
-        <a href="#me" className="pill-logo" ref={logoRef} onMouseEnter={() => gsap.to(logoImgRef.current, { rotate: 360, duration: 0.4 })}>
+        <a href="#hero" className="pill-logo" ref={logoRef} onMouseEnter={() => gsap.to(logoImgRef.current, { rotate: 360, duration: 0.4 })}>
       
         </a>
 
