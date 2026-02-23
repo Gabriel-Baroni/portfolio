@@ -25,7 +25,7 @@ const About = () => {
             }
             secondContent={
               <div className="about-card-active">
-                <p>"We are a way to the cosmos to know it self."</p>
+                <p>"We are a way to the cosmos to know itself."</p>
                 <span>Carl Sagan</span>
               </div>
             }
