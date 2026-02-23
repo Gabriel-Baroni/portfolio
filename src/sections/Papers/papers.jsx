@@ -65,7 +65,7 @@ const Projects = () => {
                   )}
                   {proj.demo && proj.demo !== '#' && (
                     <a href={proj.demo} target="_blank" rel="noopener noreferrer" className="link-icon">
-                      <FiExternalLink /> Visitar
+                      <FiExternalLink /> Visit
                     </a>
                   )}
                 </div>
