@@ -6,7 +6,7 @@ import './project.css';
 const meusProjetos = [
   {
     title: 'Papuguinho App',
-    desc: 'Alternative Communication App (ACA) for neurodivergent individuals.',
+    desc: 'Alternative Communication App (AAC) for neurodivergent individuals.',
     tags: ['FlutterFlow', 'Dart', 'Firebase', 'Cloud Firestore' ],
     image: '/assets/projects/papuguinho.png',
     github: 'https://github.com/Papuguinho', 
