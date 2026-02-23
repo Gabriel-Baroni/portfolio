@@ -9,7 +9,7 @@
   display: flex;
   justify-content: center;
   pointer-events: none;
-  background-color: transparent; /* Removido para não tapar o site */
+  background-color: var(--bg-site);
 }
 
 .pill-nav {
